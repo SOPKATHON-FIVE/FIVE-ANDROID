@@ -26,6 +26,7 @@
                 android:layout_marginTop="84dp"
                 android:layout_marginBottom="32dp"
                 android:text="오늘 살아볼 하루를 둘러보세요!"
+                android:fontFamily="@font/noto_sans"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textFontWeight="700"
@@ -46,7 +47,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cl_top"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="horizontal"/>
+            android:orientation="vertical"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
