@@ -9,6 +9,7 @@ import org.sopt.sopkathon5.andorid.data.model.DailyData
 import org.sopt.sopkathon5.andorid.databinding.ItemDailyListBinding
 
 class DailyAdapter(
+    private val isBookmarkNotVisible: Boolean? = null,
     private val itemClick: (() -> (Unit))? = null,
     private val logoutClickListener: (() -> Unit)? = null
 ) : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
@@ -19,7 +20,7 @@ class DailyAdapter(
         private val itemClick: (() -> Unit)?
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: DailyData, logoutClickListener: (() -> Unit)?) {
+        fun onBind(data: DailyData, logoutClickListener: (() -> Unit)?, isBookmarkNotVisible: Boolean?) {
             binding.data = data
             binding.tvLogout.setOnClickListener {
                 logoutClickListener?.invoke()
@@ -30,6 +31,10 @@ class DailyAdapter(
                 notifyDataSetChanged()
             }
             binding.rvTodo.adapter = todoAdapter
+
+            isBookmarkNotVisible?.let {
+                binding.isBookmarkNotVisible = it
+            }
 
             binding.btnPoint.setOnClickListener {  //호출시 itemclick 람다함수실행함
                 itemClick?.invoke()
@@ -48,7 +53,7 @@ class DailyAdapter(
     }
 
     override fun onBindViewHolder(holder: DailyViewHolder, position: Int) {
-        holder.onBind(itemList[position], logoutClickListener)
+        holder.onBind(itemList[position], logoutClickListener, isBookmarkNotVisible)
     }
 
     override fun getItemCount(): Int = itemList.size

@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/font/noto_sans.xml" value="0.10462962962962963" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25052083333333336" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.39463806152343756" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_write.xml" value="0.25052083333333336" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25052083333333336" />
         <entry key="app/src/main/res/layout/fragment_my_daily.xml" value="0.23645833333333333" />

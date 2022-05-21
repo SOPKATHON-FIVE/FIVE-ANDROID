@@ -1,6 +1,6 @@
 package org.sopt.sopkathon5.andorid.data.model.response
 
-data class ResponseStoreDaily(
+data class ResponseMyDaily(
     val status: Int,
     val success: Boolean,
     val message: String,
@@ -8,10 +8,10 @@ data class ResponseStoreDaily(
 ) {
     data class Data(
         val _id: String,
+        val dailyName: String,
         val userId: Int,
         val userName: String,
-        val dailyId: String,
-        val completeMissions: List<List<String>>,
+        val missions: List<String>,
         val __v: Int
     )
 }

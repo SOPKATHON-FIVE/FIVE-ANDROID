@@ -11,6 +11,7 @@ data class ResponseDaily(
         val dailyName : String,
         val userId : Int,
         val userName : String,
-        val missions : List<String>
+        val missions : List<String>,
+        val __v : Int
     )
 }

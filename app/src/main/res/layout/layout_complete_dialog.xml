@@ -40,48 +40,52 @@
             app:layout_constraintStart_toStartOf="@+id/tv_logout"
             app:layout_constraintTop_toBottomOf="@id/tv_logout" />
 
-        <ImageView
-            android:id="@+id/iv_photo"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="28dp"
-            app:layout_constraintDimensionRatio="193:128"
-            app:layout_constraintEnd_toEndOf="@+id/line1"
-            app:layout_constraintStart_toStartOf="@+id/line1"
-            app:layout_constraintTop_toBottomOf="@+id/line1" />
-
         <TextView
-            android:id="@+id/tv_complete_percent"
+            android:id="@+id/tv_explain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/noto_sans_kr_bold"
+            android:fontFamily="@font/noto_sans_kr_regular"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textColor="@color/mediumGrey"
+            android:textSize="14sp"
+            android:text="타인의 삶을 살아본 하루가 어땠나요?\n당신의 삶도 누군가에겐\n살아보고 싶은 하루가 될 수 있어요!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_photo"
-            tools:text="엄정원님의 일상을\n70% 살아봤어요" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_percent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_complete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
             android:layout_marginTop="47dp"
+            android:layout_marginEnd="72dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/rectangle_fill_green_12"
             android:fontFamily="@font/noto_sans_kr_bold"
-            android:text="네"
+            android:text="로그아웃 할게요."
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/iv_photo"
-            app:layout_constraintStart_toStartOf="@+id/iv_photo"
-            app:layout_constraintTop_toBottomOf="@+id/tv_complete_percent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_explain" />
+
+        <TextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/line1"
+            app:layout_constraintStart_toStartOf="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            tools:text="엄정원님의 일상을\n70% 살아봤어요" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
