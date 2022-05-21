@@ -1,5 +1,6 @@
 package org.sopt.sopkathon5.andorid.data
 
+import org.sopt.sopkathon5.andorid.data.service.ApiService
 import org.sopt.sopkathon5.andorid.data.service.MyPageService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,4 +15,6 @@ object ServiceCreator {
         .build()
 
     val myPageService = retrofit.create(MyPageService::class.java)
+
+    val apiService = retrofit.create(ApiService::class.java)
 }

@@ -1,11 +1,11 @@
 package org.sopt.sopkathon5.andorid.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import org.sopt.sopkathon5.andorid.R
+import org.sopt.sopkathon5.andorid.data.ServiceCreator.apiService
 import org.sopt.sopkathon5.andorid.data.model.DailyData
 import org.sopt.sopkathon5.andorid.databinding.FragmentHomeBinding
 import org.sopt.sopkathon5.andorid.util.base.BaseFragment
@@ -15,23 +15,28 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
-        initNetwork()
+
     }
 
-    private fun initAdapter(){
+    private fun initAdapter() {
         detailAdapter = DailyAdapter()
         binding.rvDaily.adapter = detailAdapter
-        detailAdapter.itemList.addAll(
-            listOf(
-                DailyData("sdfs"),
-                DailyData("ddfsdfs"),
-                DailyData("sfs")
-            )
-        )
-        detailAdapter.notifyDataSetChanged()
+        lifecycleScope.launch {
+            runCatching { apiService.daily() }
+                .onSuccess {
+                    detailAdapter.itemList.clear()
+                    detailAdapter.itemList.addAll(
+                        it.data.map {
+                            DailyData(it.dailyName, it.missions)
+                        }
+                    )
+                }
+                .onFailure {
+
+                }
+        }
+
 
     }
-    private fun initNetwork(){
 
-    }
 }
