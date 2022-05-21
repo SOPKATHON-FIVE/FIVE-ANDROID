@@ -1,6 +1,5 @@
 package org.sopt.sopkathon5.andorid.data.model
 
 data class DailyData(
-    val title : String,
-    val detail : String
+    val title : String
 )
