@@ -14,6 +14,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initBottomNavigation()
+        replace<HomeFragment>(R.id.container_main)
         binding.fabWrite.setOnClickListener {
             startActivity(Intent(this, WriteActivity::class.java))
         }
