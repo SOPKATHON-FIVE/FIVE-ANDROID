@@ -5,12 +5,212 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <variable
+            name="isVisible4"
+            type="Boolean" />
+
+        <variable
+            name="isVisible5"
+            type="Boolean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.write.WriteActivity">
+        android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_write_register"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.write.WriteActivity">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_write_finish"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/ic_x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_write_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:text="나의 일상 공유하기"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/et_write_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="41dp"
+                    android:layout_marginEnd="31dp"
+                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:hint="일상의 제목을 입력해주세요."
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_write_share" />
+
+
+                <ImageView
+                    android:id="@+id/iv_write_one"
+                    android:layout_width="17dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_1"
+                    app:layout_constraintStart_toStartOf="@+id/et_write_title"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_title" />
+
+                <EditText
+                    android:id="@+id/et_write_list01"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:hint="   공유할 일상을 적어주세요."
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_write_one" />
+
+                <ImageView
+                    android:id="@+id/iv_write_two"
+                    android:layout_width="17dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_2"
+                    app:layout_constraintStart_toStartOf="@+id/et_write_list01"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_list01" />
+
+                <EditText
+                    android:id="@+id/et_write_list02"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:hint="   공유할 일상을 적어주세요."
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_write_two" />
+
+                <ImageView
+                    android:id="@+id/iv_write_3"
+                    android:layout_width="17dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_33"
+                    app:layout_constraintStart_toStartOf="@+id/et_write_list02"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_list02" />
+
+                <EditText
+                    android:id="@+id/et_write_list03"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:hint="   공유할 일상을 적어주세요."
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_write_3" />
+
+                <ImageView
+                    android:id="@+id/iv_write_4"
+                    android:layout_width="17dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_4"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@+id/et_write_list03"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_list03" />
+
+                <EditText
+                    android:id="@+id/et_write_list04"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:hint="   공유할 일상을 적어주세요."
+                    android:textSize="14sp"
+                    android:visibility="@{isVisible4? View.VISIBLE : View.GONE}"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_write_4"
+                    tools:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_write_5"
+                    android:layout_width="17dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_5"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@+id/et_write_list04"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_list04" />
+
+                <EditText
+                    android:id="@+id/et_write_list05"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:hint="   공유할 일상을 적어주세요."
+                    android:textSize="14sp"
+                    android:visibility="@{isVisible5? View.VISIBLE : View.GONE}"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_write_5"
+                    tools:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btn_write_add_list"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/retangle_write_box"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginBottom="39dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_write_list05" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_write_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_retangle_green"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:text="공유하기"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
