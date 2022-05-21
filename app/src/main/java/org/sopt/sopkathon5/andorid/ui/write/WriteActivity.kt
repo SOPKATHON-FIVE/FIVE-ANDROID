@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import org.sopt.sopkathon5.andorid.R
-import org.sopt.sopkathon5.andorid.data.WriteService
+import org.sopt.sopkathon5.andorid.data.model.RequestWrite
+import org.sopt.sopkathon5.andorid.data.model.ResponseWrite
+import org.sopt.sopkathon5.andorid.data.model.ServiceCreator
+import org.sopt.sopkathon5.andorid.data.model.WriteService
 import org.sopt.sopkathon5.andorid.databinding.ActivityWriteBinding
 import org.sopt.sopkathon5.andorid.util.base.BaseActivity
+import retrofit2.Call
 
 class WriteActivity : BaseActivity<ActivityWriteBinding>(R.layout.activity_write) {
     private var cnt = 0
@@ -52,6 +56,11 @@ class WriteActivity : BaseActivity<ActivityWriteBinding>(R.layout.activity_write
         binding.btnWriteFinish.setOnClickListener{
             finish()
         }
+    }
+
+
+    private fun writeNetWork(){
+
     }
 
 

@@ -1,4 +1,4 @@
-package org.sopt.sopkathon5.andorid.data
+package org.sopt.sopkathon5.andorid.data.model
 
 data class RequestWrite(
     val userId:Int,

@@ -1,4 +1,4 @@
-package org.sopt.sopkathon5.andorid.data
+package org.sopt.sopkathon5.andorid.data.model
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,4 +11,5 @@ object ServiceCreator {
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+
 }
