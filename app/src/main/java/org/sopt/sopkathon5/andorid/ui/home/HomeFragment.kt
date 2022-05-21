@@ -20,14 +20,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private fun initAdapter(){
         detailAdapter = DailyAdapter()
         binding.rvDaily.adapter = detailAdapter
-        detailAdapter.itemList.addAll(
-            listOf(
-                DailyData("1","aaaa"),
-                DailyData("1","aaaa"),
-                DailyData("1","aaaa"),
-                DailyData("1","aaaa")
-            )
-        )
-        detailAdapter.notifyDataSetChanged()
+        
     }
 }

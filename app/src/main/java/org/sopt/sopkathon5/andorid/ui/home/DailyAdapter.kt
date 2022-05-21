@@ -17,14 +17,6 @@ class DailyAdapter : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
             binding.data = data
             val todoAdapter = TodoAdapter()
             binding.rvTodo.adapter = todoAdapter
-            todoAdapter.todoList.addAll(
-                listOf(
-                    "fdsfsa",
-                    "sfsddfa",
-                    "dsffds"
-                )
-            )
-            todoAdapter.notifyDataSetChanged()
         }
     }
 
