@@ -1,10 +1,12 @@
 # FIVE-ANDROID
-오조오조오조오조오조오조오조오조오조오조
 
+## 💚 서비스이름
 
-# 서비스이름
+### 🔑 로그인유 LOG:IN U 🔑
 
-소개멘트
+```
+ 💡 서비스 한줄 소개 : 타인의 일상을 살아보는 서비스
+```
 
 ## Default Branch
 
@@ -15,9 +17,8 @@ develop branch
 | 이름 | 담당|
 | --- | --- |
 | 문다빈 | 마이페이지, 서버연결 |
-| 박현정 | 홈 뷰, 상세뷰 |
+| 박현정 | 홈 뷰 |
 | 우진실 | 일상 작성 |
-|  |  |
 
 ## Code Convention
 [안드로이드 코딩 컨벤션](https://github.com/SOPKATHON-FIVE/FIVE-ANDROID/wiki/Android-Coding-Convention)
@@ -36,3 +37,5 @@ develop branch
 6. merge된 작업이 있을 경우, 다른 브랜치에서 작업을 진행 중이던 개발자는 본인의 브랜치로 merge된 작업을 Pull 받아온다.
 7. 종료된 Issue와 Pull Request의 Label과 Project를 관리한다.
 ```
+
+자세한 깃플로우 전략의 경우 [링크](https://github.com/8-seconds/WIKI_FOR_8_SECONDS/blob/main/GitHub/GitFlowAraboza.md)참조
