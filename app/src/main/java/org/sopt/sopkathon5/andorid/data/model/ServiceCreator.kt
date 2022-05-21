@@ -1,5 +1,6 @@
 package org.sopt.sopkathon5.andorid.data
 
+import org.sopt.sopkathon5.andorid.data.service.ApiService
 import org.sopt.sopkathon5.andorid.data.service.MyPageService
 import org.sopt.sopkathon5.andorid.data.service.WriteService
 import retrofit2.Retrofit
@@ -16,4 +17,6 @@ object ServiceCreator {
 
     val myPageService = retrofit.create(MyPageService::class.java)
     val writeService = retrofit.create(WriteService::class.java)
+
+    val apiService = retrofit.create(ApiService::class.java)
 }
