@@ -61,6 +61,9 @@ dependencies {
     // ImageLoading Library
     // Glide for general
     implementation(ThirdPartyDependencies.glide)
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     kapt(KaptDependencies.glideCompiler)
 
     // Http Client Library
