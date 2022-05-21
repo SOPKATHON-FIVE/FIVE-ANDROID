@@ -1,11 +1,7 @@
-import Versions.javaVersion
-import org.apache.tools.ant.util.JavaEnvUtils.VERSION_11
-
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -23,8 +19,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = javaVersion
-        targetCompatibility = javaVersion
+        sourceCompatibility = Versions.javaVersion
+        targetCompatibility = Versions.javaVersion
     }
 
     kotlinOptions {
