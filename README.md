@@ -53,20 +53,23 @@ develop branch
 ## 레이아웃 구현
 fragment_home, activity_write, fragment_my_page
 <HomeActivity>
- <img width="369" alt="33" src="https://user-images.githubusercontent.com/81394850/169671736-4da142c0-7d05-4d69-905e-8443dc720cfc.png">
+
+<img width="369" alt="33" src="https://user-images.githubusercontent.com/81394850/169671736-4da142c0-7d05-4d69-905e-8443dc720cfc.png">
 
 
 <WriteActivity>
-<img width="369" alt="11" src="https://user-images.githubusercontent.com/81394850/169670258-b5bef2aa-384e-4626-9c8b-3677bad526b4.png">
+ 
+ <img width="369" alt="11" src="https://user-images.githubusercontent.com/81394850/169670258-b5bef2aa-384e-4626-9c8b-3677bad526b4.png">
 
 <MyPageFragment>
- 타인의 일상뷰
- <img width="369" alt="22" src="https://user-images.githubusercontent.com/81394850/169670348-0ce64379-7342-4b2e-8b12-f734e06795fc.png">
- 나의 일상
- <img width="369" alt="10101010" src="https://user-images.githubusercontent.com/81394850/169671948-df687664-3051-4af3-b498-f7dc9b159857.png">
+타인의 일상뷰
+<img width="369" alt="22" src="https://user-images.githubusercontent.com/81394850/169670348-0ce64379-7342-4b2e-8b12-f734e06795fc.png">
+ 
+나의 일상
+<img width="369" alt="10101010" src="https://user-images.githubusercontent.com/81394850/169671948-df687664-3051-4af3-b498-f7dc9b159857.png">
 
 
- 로그아웃탭
- <img width="369" alt="555555" src="https://user-images.githubusercontent.com/81394850/169671899-2b712db8-d3a5-4447-9d6d-6930cde9b724.png">
+로그아웃탭
+<img width="369" alt="555555" src="https://user-images.githubusercontent.com/81394850/169671899-2b712db8-d3a5-4447-9d6d-6930cde9b724.png">
 
 
