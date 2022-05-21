@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="12dp"
+        tools:context=".ui.mypage.YourDailyFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_living_life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:text="살고있는 일상"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rectangle_border_yellow_44"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="진행중"
+                    android:textColor="@color/yellow"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_living_life"
+                    app:layout_constraintStart_toEndOf="@+id/tv_living_life"
+                    app:layout_constraintTop_toTopOf="@+id/tv_living_life" />
+
+                <include
+                    android:id="@+id/layout_daily"
+                    layout="@layout/item_daily_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_living_life" />
+
+
+                <TextView
+                    android:id="@+id/tv_your_living_life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:text="살고있는 일상"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_living_life"
+                    app:layout_constraintTop_toBottomOf="@id/layout_daily" />
+
+                <TextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rectangle_border_yellow_44"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="진행중"
+                    android:textColor="@color/yellow"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_your_living_life"
+                    app:layout_constraintStart_toEndOf="@+id/tv_your_living_life"
+                    app:layout_constraintTop_toTopOf="@+id/tv_your_living_life" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_your_living_life"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_done" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

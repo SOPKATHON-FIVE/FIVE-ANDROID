@@ -11,4 +11,6 @@
     <color name="bg">#E9E9E9</color>
     <color name="gray">#E6E6E6</color>
     <color name="mediumGrey">#ABA6A1</color>
+    <color name="lightgrey">#DCDBDA</color>
+    <color name="yellow">#FECE00</color>
 </resources>
