@@ -1,7 +1,8 @@
 package org.sopt.sopkathon5.andorid.data.model
 
 data class RequestWrite(
-    val userId:Int,
-    val userName: String,
-    val dailyId: String
+    val dailyName: String,
+val userId: Int,
+val userName: String,
+val missions :List<String>
 )
