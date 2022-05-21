@@ -8,15 +8,23 @@ import org.sopt.sopkathon5.andorid.R
 import org.sopt.sopkathon5.andorid.data.model.DailyData
 import org.sopt.sopkathon5.andorid.databinding.ItemDailyListBinding
 
-class DailyAdapter : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
+class DailyAdapter(private var itemClick: (() -> (Unit))? = null) :
+    RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
     val itemList = mutableListOf<DailyData>()
 
-    class DailyViewHolder(private val binding: ItemDailyListBinding) :
+    class DailyViewHolder(
+        private val binding: ItemDailyListBinding,
+        private val itemClick: () -> Unit
+    ) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: DailyData) {
             binding.data = data
             val todoAdapter = TodoAdapter()
             binding.rvTodo.adapter = todoAdapter
+
+            binding.btnPoint.setOnClickListener {  //호출시 itemclick 람다함수실행함
+                itemClick.invoke()
+            }
         }
     }
 
@@ -27,7 +35,7 @@ class DailyAdapter : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
             parent,
             false
         )
-        return DailyViewHolder(binding)
+        return DailyViewHolder(binding, itemClick)
     }
 
     override fun onBindViewHolder(holder: DailyViewHolder, position: Int) {

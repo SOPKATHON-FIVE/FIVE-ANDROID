@@ -15,11 +15,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
+        initNetwork()
     }
 
     private fun initAdapter(){
         detailAdapter = DailyAdapter()
         binding.rvDaily.adapter = detailAdapter
-        
+        detailAdapter.itemList.addAll(
+            listOf(
+                DailyData("sdfs"),
+                DailyData("ddfsdfs"),
+                DailyData("sfs")
+            )
+        )
+        detailAdapter.notifyDataSetChanged()
+
+    }
+    private fun initNetwork(){
+
     }
 }
