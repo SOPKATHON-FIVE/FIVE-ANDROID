@@ -39,6 +39,7 @@ object KaptDependencies {
 
 object ThirdPartyDependencies {
     const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
+    const val gsonConverter = "com.squareup.retrofit:converter-gson:2.9.0"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
     const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:${Versions.okHttpVersion}"
@@ -48,6 +49,7 @@ object ThirdPartyDependencies {
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
     const val leakCanary =
         "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanaryVersion}"
+    const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:2.9.0"
 }
 
 object ClassPathPlugins {

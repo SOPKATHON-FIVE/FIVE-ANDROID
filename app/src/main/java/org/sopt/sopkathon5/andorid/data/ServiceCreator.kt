@@ -1,6 +1,7 @@
 package org.sopt.sopkathon5.andorid.data
 
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceCreator {
     private const val BASE_URL = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api/"
