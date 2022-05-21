@@ -1,6 +1,7 @@
 package org.sopt.sopkathon5.andorid.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
@@ -15,7 +16,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
-
     }
 
     private fun initAdapter() {
@@ -26,17 +26,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 .onSuccess {
                     detailAdapter.itemList.clear()
                     detailAdapter.itemList.addAll(
-                        it.data.map {
-                            DailyData(it.dailyName, it.missions)
+                        it.data.map { data ->
+                            DailyData(data.dailyName, data.missions)
                         }
                     )
+                    detailAdapter.notifyDataSetChanged()
                 }
                 .onFailure {
 
                 }
         }
-
-
     }
-
 }
