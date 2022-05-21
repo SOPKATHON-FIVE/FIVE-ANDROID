@@ -17,9 +17,6 @@
             android:name=".ui.write.WriteActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.detail.DetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

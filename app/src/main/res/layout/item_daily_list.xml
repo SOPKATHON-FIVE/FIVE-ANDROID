@@ -28,10 +28,10 @@
         <ImageView
             android:id="@+id/iv_main"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/shape_rectangle"
+            android:background="@drawable/ic_frame_33689"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton

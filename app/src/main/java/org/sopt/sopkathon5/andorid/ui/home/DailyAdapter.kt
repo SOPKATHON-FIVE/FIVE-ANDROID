@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import org.sopt.sopkathon5.andorid.R
 import org.sopt.sopkathon5.andorid.data.model.DailyData
 import org.sopt.sopkathon5.andorid.databinding.ItemDailyListBinding
-import kotlin.math.log
 
-class DailyAdapter(private val itemClick: (() -> (Unit))? = null, private val logoutClickListener: (() -> Unit)? = null) : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
+class DailyAdapter(
+    private val itemClick: (() -> (Unit))? = null,
+    private val logoutClickListener: (() -> Unit)? = null
+) : RecyclerView.Adapter<DailyAdapter.DailyViewHolder>() {
     val itemList = mutableListOf<DailyData>()
 
     class DailyViewHolder(
@@ -22,7 +24,11 @@ class DailyAdapter(private val itemClick: (() -> (Unit))? = null, private val lo
             binding.tvLogout.setOnClickListener {
                 logoutClickListener?.invoke()
             }
-            val todoAdapter = TodoAdapter()
+            val todoAdapter = TodoAdapter().apply {
+                todoList.clear()
+                todoList.addAll(data.mission)
+                notifyDataSetChanged()
+            }
             binding.rvTodo.adapter = todoAdapter
 
             binding.btnPoint.setOnClickListener {  //호출시 itemclick 람다함수실행함
